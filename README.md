@@ -1,4 +1,4 @@
-# AdminPro - BAckend
+# AdminPro - Backend
 
 Ejecutar para instalar proyecto
 >>> npm install
