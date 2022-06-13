@@ -22,6 +22,9 @@ dbConnection();
 //mongodb+srv://mongodb:7nDcFF9PCjN2eeVA@cluster0.kx4d6ho.mongodb.net/hospital
 
 
+//Directorio publico
+app.use(express.static('public'));
+
 //Rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/login', require('./routes/auth'));
