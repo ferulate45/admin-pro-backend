@@ -43,10 +43,10 @@ const fileUpload = (req, res = response) => {
     }
 
     //generar nombre archivo
-    const newFieldName = `${uuidv4()}.${fileExtension}`;
+    const nombreArchivo = `${uuidv4()}.${fileExtension}`;
 
     //path para guardar archivo
-    const path = `./uploads/${tipo}/${newFieldName}`;
+    const path = `./uploads/${tipo}/${nombreArchivo}`;
 
 
     // mover imagen
@@ -61,12 +61,12 @@ const fileUpload = (req, res = response) => {
         }
 
         //update base de datos
-        actualizarImagen(tipo, uid, newFieldName);
+        actualizarImagen(tipo, uid, nombreArchivo);
 
         res.json({
             ok: true,
             msg: "file uploaded",
-            newFieldName
+            nombreArchivo
         });
     });
 };
